@@ -19,4 +19,4 @@ const UserSchema: Schema = new Schema({
 })
 
 export const User: Model<IUser, {}, {}, {}, any> =
-models.cities || model<IUser>("cities", UserSchema)
+models.users || model<IUser>("users", UserSchema)

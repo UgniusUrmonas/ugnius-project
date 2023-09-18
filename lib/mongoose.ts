@@ -6,7 +6,9 @@ declare global {
 }
 
 if (!MONGODB_URI) {
-    throw new Error ("Please define the MONGODB_URI enviroment variable inside .env.local")
+    throw new Error (
+        "Please define the MONGODB_URI enviroment variable inside .env.local"
+    )
 }
 
 let cached = global.mongoose

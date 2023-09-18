@@ -2,6 +2,9 @@ import type { NextApiRequest, NextApiResponse} from "next"
 import connect from "../../../lib/mongoose"
 import {GetCitiesService, PostCityService} from "../../../services/api/city"
 import bcrypt from "bcryptjs"
+import {City} from "../../../schemas/city.schema"
+import {authOptions} from "../auth/[...nextauth]"
+import {getServerSession} from "next-auth/next"
 
 export default async function Cities(
     req:NextApiRequest,
@@ -16,8 +19,8 @@ export default async function Cities(
         });
     });
     */
-    //const session=await getServerSession (req,res, authOptions)
-    // if(!session) return res.status(401).json({error:"Reikia prisijungti"})
+   // const session=await getServerSession (req,res, authOptions)
+   // if(!session) return res.status(401).json({error:"Reikia prisijungti"})
     await connect()
     switch (req.method) {
         case "POST": {
