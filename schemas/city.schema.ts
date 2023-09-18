@@ -1,8 +1,8 @@
 import {Schema, model, models, Model, Document} from "mongoose"
 
 export interface ICity extends Document {
-    _id:String,
-    name:String,
+    _id:string,
+    name:string,
     population:number,
 }
 
